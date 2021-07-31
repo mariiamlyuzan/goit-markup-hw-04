@@ -344,12 +344,13 @@ img {
 .customers-list {
     display: flex;
     padding: 0;
-    
 }
+
 .customers-list .item:not(:last-child) {
      margin-right: 30px;
 
 }
+
 .customers-link {
     display: inline-flex;
     align-items: center;
@@ -358,7 +359,6 @@ img {
     height: 92px;
     padding: 16px 32px;
     border: 1px solid #AFB1B8;
-
 }
 
 .customers-link .icon {
@@ -437,6 +437,13 @@ img {
 
 .projects .item {
     width: 370px;
+    cursor: pointer;
+}
+
+.projects .item:hover,
+.projects .item:focus {
+    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000F, 0px 1px 1px 0px #0000001F;
+
 }
 
 .projects .item:not(:nth-child(3n)) {
