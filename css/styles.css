@@ -133,9 +133,9 @@ img {
     fill: var(--primary-text-color);
     margin-right: 10px;
 }
-
+ 
 .icon-envelope:hover,
-.icon-envrlope:focus,
+.icon-envelope:focus,
 .icon-smartphone:hover,
 .icon-smartphone:focus {
     fill: var(--accent-color);
@@ -149,7 +149,7 @@ img {
 .contact-nav .item:not(:first-child) { 
     margin-left: 50px;
 }
-
+ 
 .contact-link:hover,
 .contact-link:focus {
     color: var(--accent-color);
@@ -321,6 +321,7 @@ img {
     height: 44px;
     border-radius: 50%;
 }
+ 
 .social-network:focus,
 .social-network:hover {
     background-color: var(--accent-color);
