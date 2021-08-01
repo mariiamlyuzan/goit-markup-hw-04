@@ -11,8 +11,8 @@
     --border-content-color: #EEEEEE;
     --footer-link-color: #FFFFFF99;
     --icon-color: #AFB1B8;
-
-
+    --social-network-color: #FFFFFF1A;
+    
 }
 
 body {
@@ -42,6 +42,14 @@ img {
 
 .list {
     list-style: none;
+}
+
+  /* Container */ 
+
+  .container {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 15px;
 }
 
   /* Site nav */ 
@@ -77,16 +85,6 @@ img {
     align-items: center;
     padding: 24px 0;
 }
-
-  /* Container */ 
-
-.container {
-     margin-left: auto;
-     margin-right: auto;
-     width: 1200px;
-     padding-left: 15px;
-     padding-right: 15px;
- }
 
 .nav-link {
     color: var(--primary-title-color);
@@ -133,13 +131,6 @@ img {
     fill: var(--primary-text-color);
     margin-right: 10px;
 }
- 
-.icon-envelope:hover,
-.icon-envelope:focus,
-.icon-smartphone:hover,
-.icon-smartphone:focus {
-    fill: var(--accent-color);
-}
 
 .contact-nav {
     display: flex;
@@ -155,6 +146,13 @@ img {
     color: var(--accent-color);
 }
 
+.contact-link:hover .icon-envelope,
+.contact-link:focus .icon-envelope,
+.contact-link:hover .icon-smartphone,
+.contact-link:focus .icon-smartphone {
+    fill: var(--accent-color);
+}
+
  /* Hero */
 
 .hero { 
@@ -165,7 +163,6 @@ img {
 
     display: block;
     max-width: 1600px;
-    height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -184,7 +181,7 @@ img {
     max-width: 696px;
     margin: auto;
 
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
  /* Section */
@@ -229,14 +226,14 @@ img {
     letter-spacing: 0.03em;
     text-align: left;
 }
+
 .feature {
     display: flex;
-    align-items: center;
+    justify-content: center;
     background-color: Var(--primary-background-color);
     height: 120px;
     margin-bottom: 30px;
     padding: 25px 0;
-
 }
 
  /* Work */
@@ -278,8 +275,7 @@ img {
 .team .item {
     background-color: var(--primary-white-color);
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
-
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .names {
@@ -306,7 +302,7 @@ img {
     margin-bottom: 16px;
 }
 
-.social {
+.social-list {
     display: flex;
     justify-content: space-between;
     padding-left: 30px;
@@ -331,8 +327,8 @@ img {
     fill: var(--icon-color);
 }
 
-.social-network .icon:hover,
-.social-network .icon:focus {
+.social-network:hover .icon,
+.social-network:focus .icon {
     fill: var(--primary-white-color);
 }
 
@@ -359,18 +355,20 @@ img {
     width: 170px;
     height: 92px;
     padding: 16px 32px;
-    border: 1px solid #AFB1B8;
+    border: 1px solid var(--icon-color);
 }
 
 .customers-link .icon {
     fill: var(--icon-color);  
 }
 
-.customers-link:hover {
+.customers-link:hover,
+.customers-link:focus {
     border: 1px solid var(--accent-color);
 }
 
-.customers-link .icon:hover {
+.customers-link:hover .icon,
+.customers-link:focus .icon {
     fill: var(--accent-color);
 }
 
@@ -388,6 +386,8 @@ img {
     background-color: var(--accent-color);
     border: 1px solid transparent;
     font-family: inherit;
+    font-size: 16px;
+    line-height: 1.9;
     cursor: pointer;
 }
 
@@ -425,7 +425,7 @@ img {
 .filters .portfolio-button:focus {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
-    box-shadow: 0px 2px 2px 0px #0000001F, 0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001A;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
  /* Projects */
@@ -443,8 +443,7 @@ img {
 
 .projects .item:hover,
 .projects .item:focus {
-    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000F, 0px 1px 1px 0px #0000001F;
-
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects .item:not(:nth-child(3n)) {
@@ -492,17 +491,17 @@ img {
     margin-left: 40px;
 }
 
-.footer-list {
+.footer-content {
    display: flex;
    align-items: baseline;
 }
 
-.footer-list .item {
+.footer-content .item {
     margin-bottom: 9px;
     display: block;
 }
 
-.footer-list .item:last-child {
+.footer-content .item:last-child {
     margin-bottom: 0;
 }
 
@@ -548,8 +547,7 @@ img {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: #FFFFFF1A;
-    
+    background-color: var(--social-network-color);
 }
 
 .social-footer .item:not(:last-child) { 
